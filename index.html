@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let reqemler = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144];
+      let cem = 1;
+
+      for (let i = 2; true; i++) {
+        reqemler[i] = reqemler[i - 1] + reqemler[i - 2];
+
+        if (cem + reqemler[i] > 200) {
+          break;
+        }
+        cem = cem + reqemler[i];
+      }
+      console.log(cem);
+    </script>
+  </body>
+</html>
